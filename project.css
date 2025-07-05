@@ -141,27 +141,8 @@ section {
     margin: 20px;
 }
 
-.third {
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 5%;
-}
 
-.third a {
-  text-decoration: none;
-  background-color: orangered;
-  border: 1px solid #ccc;
-  padding: 10px 2%;
-  border-radius: 15px;
-  color: #e6e1e1;
-  font-size: large;
-  margin-left: 10%;
-  transition: background-color 0.3s ease;
-}
 
-.third a:hover {
-  background-color: rgb(122, 146, 192);
-}
 
 #icons {
   font-size: 30px;
