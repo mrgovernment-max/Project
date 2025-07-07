@@ -34,6 +34,18 @@
         <a href="#" onclick="conTact()">Contact</a>
       </div>
     </div>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleMenu()">&#8801;</button>
+      <div class="dropdown-content" id="mobileMenu">
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="#" onclick="showServices(); closeMenu()" >Services</a>
+        <a href="#" onclick="aboutMe(); closeMenu(); return false;">About</a>
+        <a href="#" onclick="conTact(); closeMenu(); return false;">Contact</a>
+      </div>
+    </div>
+    
+
   </header>
 
   <section>
@@ -96,6 +108,20 @@ function conTact() {
   textArea.classList.remove('animate');
   void textArea.offsetWidth;
   textArea.classList.add('animate');
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  if (menu.style.display === 'block') {
+    menu.style.display = 'none';
+  } else {
+    menu.style.display = 'block';
+  }
+}
+
+function closeMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.style.display = 'none';
 }
 
 
