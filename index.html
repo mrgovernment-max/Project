@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +11,17 @@
 </head>
 <body>
 
-  <div class="whole">
+  <header>
+    <div class="branding">
+      <h1>NOVA</h1>
+    </div>
+
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="info.html">Info</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="index.html">Home</a></li>
+        <li><a href="#" onclick="aboutMe()">About</a></li>
+        <li><a  href="#" onclick="showServices()" >Services</a></li>
+        <li><a  href="#" onclick="conTact()">Contact</a></li>
       </ul>
     </nav>
 
@@ -27,41 +29,85 @@
       <button class="dropbtn">&#8801;</button>
       <div class="dropdown-content">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="info.html">Info</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a id="about" href="about.html">About</a>
+        <a id="service" href="services.html">Services</a>
+        <a id="contact" href="contact.html">Contact</a>
       </div>
     </div>
+  </header>
 
-    <section>
-      <div class="main">
-
-        <div class="first">
-          <p><b style="font-size: 60px; -webkit-text-stroke: 1px;">EMMAN</b></p>
-        </div>
-
-        <div class="second">
-          <p>
-            Welcome to my digital space! I am a passionate developer with a penchant for elegant code and creative problem-solving.
-            With a background in front-end development, I craft solutions that blend functionality with aesthetics. 
-            Whether it's building responsive web apps or optimizing database queries, I thrive on turning ideas into reality.
-            Explore my projects, get to know my journey, and let's collaborate on something remarkable.
-          </p>
-        </div>
-
-      
-
-        <div id="icons">
-          <a target="_blank" href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsnapchat.com%2Ft%2FMpSeMetz&data=05%7C02%7C24015084%40activatelearning.ac.uk%7C2a2986c3110e44e9ea5d08dd5c9846b8%7Cd0da4c4cf48e4668886b52b056507a5e%7C0%7C0%7C638768531271459496%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=JbQ2GNcei9Zfz8%2FMuZN89OIWOoeQIRpbpNwfmFnHUrM%3D&reserved=0"><i class="fab fa-snapchat"></i></a>
-          <a target="_blank" href="https://www.instagram.com/_idonmindit/"><i class="fab fa-instagram"></i></a>
-          <a target="_blank" href="https://www.linkedin.com/in/emmanuel-fenteng-135092308 "><i class="fab fa-linkedin"></i></a>
-          <a target="_blank" href="https://github.com/mrgovernment-max"><i class="fab fa-github"></i></a>
-        </div>
-
+  <section>
+    <div class="main glass-box">
+      <div class="first">
+        <p><b>EMMAN</b></p>
       </div>
-    </section>
-  </div>
+
+      <div class="second" >
+        <p id="changes" class="animate">
+          Welcome to my digital space! I am a passionate developer with a penchant for elegant code and creative problem-solving.
+          With a background in front-end development, I craft solutions that blend functionality with aesthetics. 
+          Whether it's building responsive web apps or optimizing database queries, I thrive on turning ideas into reality.
+        </p>
+      </div>
+
+      <div id="icons">
+        <a target="_blank" href="https://snapchat.com/t/MpSeMetz"><i class="fab fa-snapchat"></i></a>
+        <a target="_blank" href="https://www.instagram.com/_idonmindit/"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/emmanuel-fenteng-135092308"><i class="fab fa-linkedin"></i></a>
+        <a target="_blank" href="https://github.com/mrgovernment-max"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+ <script>
+
+
+   function aboutMe() {
+    const icons = document.getElementById('icons').style.fontSize = '30px';
+    const textArea = document.getElementById('changes');
+    
+    // Change content
+    textArea.innerHTML = `
+      I'm Emmanuel — a passionate developer who loves turning creative ideas into real digital experiences. 
+      I specialize in front-end development, blending modern design with clean, functional code.
+    `;
+
+    // Re-trigger the animation
+    textArea.classList.remove('animate');
+    void textArea.offsetWidth; // forces reflow
+    textArea.classList.add('animate');
+  }
+
+  function showServices() {
+    const icons = document.getElementById('icons').style.fontSize = '30px';
+  const textArea = document.getElementById('changes');
+  textArea.innerHTML = `I offer front-end dev, responsive design, and custom UI solutions alongside cloud solutions`;
+  textArea.classList.remove('animate');
+  void textArea.offsetWidth;
+  textArea.classList.add('animate');
+}
+
+
+function conTact() {
+  const textArea = document.getElementById('changes');
+  textArea.innerHTML = `lets build something awesome!`;
+  const icons = document.getElementById('icons').style.fontSize = '45px';
+
+  icons.classList.remove('animate');
+  void icons.offsetWidth;
+  icons.classList.add('animate');
+
+  textArea.classList.remove('animate');
+  void textArea.offsetWidth;
+  textArea.classList.add('animate');
+}
+
+
+
+</script>
+
+
+
 
 </body>
 </html>
